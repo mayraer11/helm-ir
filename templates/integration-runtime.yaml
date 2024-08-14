@@ -1,10 +1,10 @@
 apiVersion: appconnect.ibm.com/v1beta1
 kind: IntegrationRuntime
 metadata:
-  name: ir-06-quickstart
+  name: {{ .Values.name }}
   labels:
     backup.appconnect.ibm.com/component: integrationruntime
-  namespace: cp4i
+  namespace: {{ .Values.namespace }}
 spec:
   license:
     accept: true
